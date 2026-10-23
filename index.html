@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Consultoria e assessoria jurídica, administrativa e contábil para entidades do Terceiro Setor, com atuação nacional.">
+<title>Rebeca Rezende – Consultoria e Assessoria ao Terceiro Setor</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --cinza:#777576; --cinza-esc:#4a4849; --texto:#3a3839;
+  --ouro:#F1E5BD; --ouro-esc:#a8935a; --offwhite:#F7F6F1; --branco:#fff;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:var(--sans);color:var(--texto);background:var(--offwhite);line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1120px,92%);margin:0 auto}
+section{padding:96px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0 0 .5em;color:var(--cinza-esc)}
+h1{font-size:clamp(2.4rem,5.5vw,4.2rem)}
+h2{font-size:clamp(2rem,4vw,2.9rem)}
+h3{font-size:1.35rem}
+.eyebrow{display:block;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro-esc);font-weight:600;margin-bottom:14px}
+.btn{display:inline-block;padding:15px 30px;background:var(--cinza-esc);color:var(--ouro);text-decoration:none;font-weight:600;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--cinza-esc);transition:.25s;cursor:pointer;font-family:var(--sans)}
+.btn:hover{background:var(--ouro);color:var(--cinza-esc);border-color:var(--ouro-esc)}
+.btn.ghost{background:transparent;color:var(--cinza-esc);border-color:var(--cinza)}
+.btn.ghost:hover{background:var(--cinza-esc);color:var(--ouro)}
+
+/* header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(247,246,241,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(119,117,118,.25)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:20px}
+.brand{font-family:var(--serif);font-size:1.45rem;font-weight:700;color:var(--cinza-esc);text-decoration:none;line-height:1.1}
+.brand small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ouro-esc);font-weight:600}
+.custom-logo{max-height:52px;width:auto}
+.nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;align-items:center}
+.nav a{text-decoration:none;font-size:.88rem;letter-spacing:.04em;color:var(--cinza-esc)}
+.nav a:hover{color:var(--ouro-esc)}
+.nav .btn{padding:10px 20px;color:var(--ouro)}
+.nav .btn:hover{color:var(--cinza-esc)}
+.menu-toggle{display:none;background:none;border:1px solid var(--cinza);padding:8px 12px;color:var(--cinza-esc);font-size:1rem;cursor:pointer}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--offwhite) 55%,var(--ouro) 160%);padding:120px 0 110px}
+.hero p{max-width:620px;font-size:1.15rem;color:var(--cinza-esc);margin:0 0 34px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero h1 em{font-style:italic;color:var(--ouro-esc)}
+
+/* serviços */
+.servicos{background:var(--branco)}
+.head{max-width:680px;margin-bottom:54px}
+
+/* carrossel de serviços */
+.head.center{margin-left:auto;margin-right:auto;text-align:center}
+.carr{position:relative;padding:0 68px}
+.track{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;padding:6px 0 10px}
+.track::-webkit-scrollbar{display:none}
+.track:focus-visible{outline:2px solid var(--ouro-esc)}
+.slide{flex:0 0 calc((100% - 56px)/3);scroll-snap-align:start;text-align:center;display:flex;flex-direction:column;align-items:center}
+.ico{width:150px;height:150px;border-radius:50%;margin-bottom:26px;display:grid;place-items:center;color:var(--cinza-esc);background:radial-gradient(circle at 30% 25%,#fff7dc,var(--ouro) 55%,#e3d198);box-shadow:0 14px 30px rgba(168,147,90,.28)}
+.ico svg{width:66px;height:66px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.slide h3{font-size:1.6rem}
+.slide p{color:var(--cinza-esc);font-size:.97rem;margin:0}
+.arrow{position:absolute;top:75px;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;border:1px solid var(--ouro-esc);background:var(--offwhite);color:var(--cinza-esc);cursor:pointer;display:grid;place-items:center;transition:.2s;z-index:2}
+.arrow svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.arrow:hover:not(:disabled){background:var(--cinza-esc);color:var(--ouro);border-color:var(--cinza-esc)}
+.arrow:disabled{opacity:.3;cursor:default}
+.arrow.prev{left:0}.arrow.next{right:0}
+@media(max-width:900px){.slide{flex-basis:calc((100% - 28px)/2)}}
+@media(max-width:720px){.carr{padding:0 4px}.slide{flex-basis:100%}.arrow{top:75px;width:42px;height:42px}.arrow.prev{left:-4px}.arrow.next{right:-4px}.track{padding:6px 34px 10px}}
+
+/* sobre */
+.sobre{background:var(--cinza-esc);color:var(--offwhite)}
+.sobre h2{color:var(--ouro)}
+.sobre .eyebrow{color:var(--ouro)}
+.sobre .cols{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center}
+.sobre p{font-size:1.1rem;margin:0}
+.pilares{border-left:1px solid var(--ouro-esc);padding-left:40px}
+.pilares div{font-family:var(--serif);font-size:1.7rem;color:var(--ouro);padding:12px 0;border-bottom:1px solid rgba(241,229,189,.25)}
+.pilares div:last-child{border:0}
+
+/* portfólio */
+.grid-port{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+
+.port{background:var(--branco);border:1px solid rgba(119,117,118,.22);border-top:3px solid var(--ouro-esc);padding:34px 24px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px}
+.port h3{margin:0;font-size:1.7rem}
+.port-wrap{display:flex;flex-direction:column;gap:14px}
+.port-wrap .port{flex:1}
+.cidade{margin:0;text-align:center;font-size:1.05rem;font-weight:500;color:var(--cinza-esc)}
+.port .logo{height:150px;display:grid;place-items:center}
+.port .logo img{max-height:150px;max-width:100%;width:auto;object-fit:contain}
+
+/* diferenciais */
+.dif{background:var(--ouro)}
+.dif .eyebrow{color:var(--cinza-esc)}
+.grid-dif{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+.grid-dif h3{font-size:1.3rem;border-top:2px solid var(--cinza-esc);padding-top:16px}
+.grid-dif p{margin:0;color:var(--cinza-esc);font-size:.95rem}
+
+/* contato */
+.contato .cols{display:grid;grid-template-columns:1fr 1.2fr;gap:64px}
+.info p{margin:0 0 22px;font-size:1.05rem}
+.info strong{display:block;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro-esc)}
+.info a{text-decoration:none;font-size:inherit;color:var(--cinza-esc)}
+.info a:hover{color:var(--ouro-esc)}
+form.rr{background:var(--branco);padding:38px;border:1px solid rgba(119,117,118,.22)}
+form.rr label{display:block;font-size:.82rem;font-weight:600;color:var(--cinza-esc);margin-bottom:6px}
+form.rr input,form.rr textarea{width:100%;padding:13px 14px;border:1px solid var(--cinza);background:var(--offwhite);font:inherit;color:var(--texto);margin-bottom:18px}
+form.rr input:focus,form.rr textarea:focus{outline:2px solid var(--ouro-esc);outline-offset:0}
+.hp{position:absolute;left:-9999px}
+.aviso{padding:14px 18px;margin-bottom:20px;border-left:4px solid var(--ouro-esc);background:var(--ouro);color:var(--cinza-esc);font-weight:500}
+.aviso.erro{background:#f4dcdc;border-color:#a33}
+
+/* footer */
+.site-footer{background:var(--cinza-esc);color:var(--offwhite);padding:44px 0;font-size:.9rem}
+.site-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.site-footer a{color:var(--ouro);text-decoration:none}
+.zap{position:fixed;right:22px;bottom:22px;z-index:60;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.28);text-decoration:none;transition:.2s}
+.zap:hover{transform:scale(1.08)}
+.zap svg{width:30px;height:30px;fill:#fff}
+
+@media(max-width:900px){
+  section{padding:68px 0}
+  .grid-port{grid-template-columns:1fr 1fr}
+  .grid-dif{grid-template-columns:1fr 1fr}
+  .sobre .cols,.contato .cols{grid-template-columns:1fr;gap:40px}
+  .pilares{border-left:0;padding-left:0}
+}
+@media(max-width:720px){
+  .menu-toggle{display:block}
+  .nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--offwhite);border-bottom:1px solid var(--cinza);padding:20px 4%}
+  .nav.open{display:block}
+  .nav ul{flex-direction:column;align-items:flex-start;gap:16px}
+  .grid-port,.grid-dif{grid-template-columns:1fr}
+  .hero{padding:80px 0}
+  form.rr{padding:26px}
+}
+
+html{color-scheme:light}</style></head><body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="#">Rebeca Rezende<small>Advocacia</small></a>
+<button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+<nav class="nav" aria-label="Principal"><ul>
+<li><a href="#servicos">Serviços</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#portfolio">Clientes</a></li><li><a href="#diferenciais">Diferenciais</a></li><li><a href="#contato">Contato</a></li>
+<li><a class="btn" href="https://wa.me/5561995419942" target="_blank" rel="noopener">WhatsApp</a></li></ul></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><span class="eyebrow">Consultoria e assessoria · Terceiro Setor</span>
+<h1>Segurança jurídica para quem <em>transforma</em> a sociedade</h1>
+<p>Assessoria jurídica, administrativa e contábil completa para a sua organização civil, com atuação em todo o território nacional.</p>
+<div class="actions"><a class="btn" href="https://wa.me/5561995419942" target="_blank" rel="noopener">Falar no WhatsApp</a><a class="btn ghost" href="#servicos">Conheça os serviços</a></div></div></section>
+<section class="servicos" id="servicos"><div class="wrap"><div class="head center"><span class="eyebrow">Nossos serviços</span><h2>Atuação nacional, acompanhamento completo</h2></div><div class="carr"><button class="arrow prev" aria-label="Serviço anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><div class="track" tabindex="0"><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="21" cy="21" r="9"/><path d="M28 28l9 9M17 21h8M21 17v8"/></svg></div><h3>Diagnóstico institucional</h3><p>Análise da situação jurídica, documental e fiscal da entidade, apontando pendências e caminhos para a regularização.</p></article><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="19" r="9"/><path d="M19 27l-3 14 8-5 8 5-3-14"/></svg></div><h3>Títulos e registros</h3><p>Orientação e condução do processo de obtenção de títulos e registros para a atuação da sua entidade.</p></article><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 6h16l8 8v28H13z"/><path d="M29 6v8h8M18 24h14M18 30h14M18 36h9"/></svg></div><h3>Documentação institucional</h3><p>Elaboração e atualização de estatutos, atas e demais documentos que sustentam a organização.</p></article><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 18L24 7l18 11z"/><path d="M10 40h28M12 20v16M20 20v16M28 20v16M36 20v16"/></svg></div><h3>Registros junto aos órgãos</h3><p>Protocolo e acompanhamento dos registros da entidade junto aos órgãos públicos competentes.</p></article><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="2"/></svg></div><h3>Projetos e acompanhamento</h3><p>Elaboração de projetos e acompanhamento da tramitação junto aos órgãos, do protocolo à aprovação.</p></article><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="7" width="28" height="34" rx="2"/><path d="M16 17l3 3 5-6M28 18h5M16 29l3 3 5-6M28 30h5"/></svg></div><h3>Planos de trabalho</h3><p>Estruturação de planos de trabalho claros e consistentes, alinhados às exigências de parcerias e convênios.</p></article><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l15 6v11c0 9-6 15-15 19C15 38 9 32 9 23V12z"/><path d="M17 24l5 5 9-10"/></svg></div><h3>Compliance e certidões</h3><p>Manutenção da regularidade da entidade, com controle de certidões e adequação às normas aplicáveis.</p></article><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 40h30M14 40V26M24 40V14M34 40V21"/></svg></div><h3>Gestão de recursos</h3><p>Acompanhamento da aplicação dos recursos recebidos, com organização e transparência.</p></article><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="6" width="26" height="36" rx="3"/><rect x="16" y="11" width="16" height="7"/><path d="M17 26h.01M24 26h.01M31 26h.01M17 33h.01M24 33h.01M31 33h.01"/></svg></div><h3>Prestação de contas</h3><p>Preparação e apresentação das prestações de contas, com documentação organizada e dentro dos prazos.</p></article><article class="slide"><div class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M36 12L12 36"/><circle cx="15" cy="15" r="5"/><circle cx="33" cy="33" r="5"/></svg></div><h3>Fiscal e tributário</h3><p>Suporte às obrigações fiscais e tributárias, mantendo a entidade em dia e segura.</p></article></div><button class="arrow next" aria-label="Próximo serviço"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div></div></section>
+<section class="sobre" id="sobre"><div class="wrap cols"><div><span class="eyebrow">Sobre o escritório</span><h2>Especialistas no Terceiro Setor</h2>
+<p>Somos um escritório especializado no Terceiro Setor e oferecemos à sua entidade assessoria jurídica e suporte administrativo em todas as etapas de sua atuação, incluindo também a área contábil, proporcionando um acompanhamento integrado e completo para a sua Organização Civil.</p>
+</div>
+<div class="pilares"><div>Jurídico</div><div>Administrativo</div><div>Contábil</div></div></div></section>
+<section id="portfolio"><div class="wrap"><div class="head"><span class="eyebrow">Nossos trabalhos</span><h2>Algumas entidades que confiam em nosso trabalho</h2></div><div class="grid-port"><div class="port-wrap"><div class="port"><h3>Coopermar</h3><div class="logo"><img src="assets/coopermar.webp" alt="Logo Coopermar" loading="lazy"></div></div><p class="cidade">Mongaguá/SP</p></div><div class="port-wrap"><div class="port"><h3>Sport Tri BSB</h3><div class="logo"><img src="assets/sporttri.webp" alt="Logo Sport Tri BSB" loading="lazy"></div></div><p class="cidade">Brasília/DF</p></div><div class="port-wrap"><div class="port"><h3>UACEP</h3><div class="logo"><img src="assets/uacep.webp" alt="Logo UACEP" loading="lazy"></div></div><p class="cidade">Santos/SP</p></div></div></div></section>
+<section class="dif" id="diferenciais"><div class="wrap"><div class="head"><span class="eyebrow">Diferenciais</span><h2>Por que escolher nosso escritório?</h2></div><div class="grid-dif"><div><h3>Atuação nacional</h3><p>Atendemos entidades em todo o país, com acompanhamento junto aos órgãos competentes.</p></div><div><h3>Suporte integrado</h3><p>Assessoria jurídica, administrativa e contábil reunidas em um único escritório.</p></div><div><h3>Segurança institucional</h3><p>Compliance, certidões e documentação em dia para a sua organização.</p></div><div><h3>Gestão de recursos</h3><p>Planos de trabalho, aplicação de recursos e prestação de contas com rigor.</p></div></div></div></section>
+<section class="contato" id="contato"><div class="wrap cols"><div class="info"><span class="eyebrow">Contato</span><h2>Vamos conversar sobre a sua entidade?</h2>
+<p>Conte-nos a sua necessidade e retornaremos o quanto antes.</p>
+<p><strong>WhatsApp / Telefone</strong><a href="https://wa.me/5561995419942" target="_blank" rel="noopener">(61) 99541-9942</a></p>
+<p><strong>E-mail</strong><a href="mailto:drarebecarezende@gmail.com">drarebecarezende@gmail.com</a></p>
+<p><strong>Localização</strong>Brasília – DF · Atendimento nacional</p>
+<p><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/rebecarezendeguedes" target="_blank" rel="noopener">Rebeca Rezende Guedes</a></p></div>
+<form class="rr" id="f"><div class="aviso" id="av" role="status" hidden></div>
+<label for="nome">Nome</label><input id="nome" required>
+<label for="email">E-mail</label><input id="email" type="email" required>
+<label for="telefone">Telefone / WhatsApp</label><input id="telefone">
+<label for="mensagem">Explique a necessidade da sua entidade</label><textarea id="mensagem" rows="5" required></textarea>
+<button class="btn" type="submit">Enviar mensagem</button></form></div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><span>© 2026 Rebeca Rezende Advocacia. Todos os direitos reservados.</span><a href="https://www.linkedin.com/in/rebecarezendeguedes" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+<a class="zap" href="https://wa.me/5561995419942" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.3.7 4.5 1.9 6.3L4 29l8-2.1c1.8 1 3.800 1.500 6 1.500 6.600 0 12-5.300 12-11.900S22.600 3 16 3zm0 21.800c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.700 1.200 1.300-4.600-.3-.5a9.700 9.700 0 0 1-1.500-5.200C5.100 9.500 10 5.200 16 5.200s10.900 4.300 10.900 9.700S22 24.800 16 24.800zm5.700-7.300c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.3 0-.5.100-.7l.5-.6c.2-.2.200-.3.300-.5.100-.2.100-.4 0-.6l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400-.3.300-1.200 1.100-1.200 2.800s1.200 3.200 1.400 3.500c.2.200 2.400 3.700 5.800 5.100.8.400 1.500.6 2 .7.800.3 1.600.2 2.200.1.700-.1 1.900-.8 2.200-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.3-.6-.4z"/></svg></a>
+<script>
+var b=document.querySelector('.menu-toggle'),n=document.querySelector('.nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+n.addEventListener('click',function(e){if(e.target.tagName==='A')n.classList.remove('open')});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+var v=function(i){return document.getElementById(i).value.trim()};
+var m='Olá! Meu nome é '+v('nome')+'.\nE-mail: '+v('email')+(v('telefone')?'\nTelefone: '+v('telefone'):'')+'\n\n'+v('mensagem');
+var av=document.getElementById('av');av.textContent='Abrindo o WhatsApp para enviar a sua mensagem...';av.hidden=false;
+window.open('https://wa.me/5561995419942?text='+encodeURIComponent(m),'_blank','noopener')});
+</script><script>
+(function(){var t=document.querySelector('.track');if(!t)return;
+var p=document.querySelector('.arrow.prev'),x=document.querySelector('.arrow.next');
+function st(){var s=t.querySelector('.slide');return s.getBoundingClientRect().width+parseFloat(getComputedStyle(t).columnGap||28)}
+function up(){p.disabled=t.scrollLeft<4;x.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4}
+p.addEventListener('click',function(){t.scrollBy({left:-st(),behavior:'smooth'})});
+x.addEventListener('click',function(){t.scrollBy({left:st(),behavior:'smooth'})});
+t.addEventListener('scroll',up);window.addEventListener('resize',up);up();
+var car=t.parentNode,tm=null,vis=true,rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var bh=rm?'instant':'smooth';
+function nx(){if(t.scrollLeft+t.clientWidth>=t.scrollWidth-4){t.scrollTo({left:0,behavior:bh})}else{t.scrollBy({left:st(),behavior:bh})}}
+function stop(){if(tm){clearInterval(tm);tm=null}}
+function start(){stop();if(vis&&!document.hidden){tm=setInterval(nx,2000)}}
+['mouseenter','focusin','touchstart'].forEach(function(e){car.addEventListener(e,stop,{passive:true})});
+['mouseleave','focusout','touchend'].forEach(function(e){car.addEventListener(e,start,{passive:true})});
+document.addEventListener('visibilitychange',start);
+if('IntersectionObserver' in window){new IntersectionObserver(function(en){vis=en[0].isIntersecting;start()}).observe(car)}
+start();})();
+</script>
+</body></html>
